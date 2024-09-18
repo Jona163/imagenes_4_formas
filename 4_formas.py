@@ -55,4 +55,5 @@ def apply_transformation(image, matrix):
         inverse_matrix = np.linalg.inv(matrix)[:2, :2]
         offset = np.linalg.inv(matrix)[:2, 2]
         transformed_image = affine_transform(image, inverse_matrix, offset=offset, output_shape=image.shape)
+     return transformed_image
     
