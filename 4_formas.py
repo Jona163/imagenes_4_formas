@@ -63,3 +63,14 @@ fig, axs = plt.subplots(2, 2, figsize=(10, 10))
 # Título general para el conjunto de imágenes
 fig.suptitle('Transformaciones Imágenes', fontsize=16)
 
+
+# Aplicar las transformaciones
+# 1. Traslación (50 píxeles en x y 30 en y)
+translation = translation_matrix(50, 30)
+translated_image = apply_transformation(image, translation)
+plot_image(translated_image, 'Traslación (50 px en X, 30 px en Y)', axs[0, 0])
+
+# 2. Rotación (45 grados)
+rotation = rotation_matrix(np.radians(45))
+rotated_image = apply_transformation(image, rotation)
+plot_image(rotated_image, 'Rotación 45°', axs[0, 1])
