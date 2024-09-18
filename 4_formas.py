@@ -12,3 +12,11 @@ def plot_image(image, title, ax):
     ax.imshow(image)
     ax.set_title(title, fontsize=10)
     ax.axis('off')
+
+
+# Crear matrices de transformación
+# 1. Traslación
+def translation_matrix(tx, ty):
+    return np.array([[1, 0, tx],
+                     [0, 1, ty],
+                     [0, 0, 1]])
