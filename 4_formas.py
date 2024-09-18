@@ -56,4 +56,10 @@ def apply_transformation(image, matrix):
         offset = np.linalg.inv(matrix)[:2, 2]
         transformed_image = affine_transform(image, inverse_matrix, offset=offset, output_shape=image.shape)
      return transformed_image
-    
+
+# Configurar las subplots
+fig, axs = plt.subplots(2, 2, figsize=(10, 10))
+
+# Título general para el conjunto de imágenes
+fig.suptitle('Transformaciones Imágenes', fontsize=16)
+
