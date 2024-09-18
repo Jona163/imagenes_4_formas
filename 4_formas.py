@@ -34,3 +34,10 @@ def scaling_matrix(sx, sy):
     return np.array([[sx, 0, 0],
                      [0, sy, 0],
                      [0, 0, 1]])
+
+
+# 4. Cizallado
+def shearing_matrix(kx, ky):
+    return np.array([[1, kx, 0],
+                     [ky, 1, 0],
+                     [0, 0, 1]])
