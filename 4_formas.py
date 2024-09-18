@@ -74,3 +74,14 @@ plot_image(translated_image, 'Traslación (50 px en X, 30 px en Y)', axs[0, 0])
 rotation = rotation_matrix(np.radians(45))
 rotated_image = apply_transformation(image, rotation)
 plot_image(rotated_image, 'Rotación 45°', axs[0, 1])
+
+
+# 3. Escalamiento (1.5x en X y 0.5x en Y)
+scaling = scaling_matrix(1.5, 0.5)
+scaled_image = apply_transformation(image, scaling)
+plot_image(scaled_image, 'Escalamiento (1.5x en X, 0.5x en Y)', axs[1, 0])
+
+# 4. Cizallado (0.5 en X, 0.2 en Y)
+shearing = shearing_matrix(0.5, 0.2)
+sheared_image = apply_transformation(image, shearing)
+plot_image(sheared_image, 'Cizallado (0.5 en X, 0.2 en Y)', axs[1, 1])
