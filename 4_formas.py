@@ -41,3 +41,13 @@ def shearing_matrix(kx, ky):
     return np.array([[1, kx, 0],
                      [ky, 1, 0],
                      [0, 0, 1]])
+
+
+# Función para aplicar la transformación
+def apply_transformation(image, matrix):
+    if len(image.shape) == 3:  # Imágenes RGB
+        transformed_image = np.zeros_like(image)
+        for i in range(image.shape[2]):  # Aplicar a cada canal
+            inverse_matrix = np.linalg.inv(matrix)[:2, :2]
+            offset = np.linalg.inv(matrix)[:2, 2]
+            transformed_image[..., i] = affine_transform(image[..., i], inverse_matrix, offset=offset, output_shape=image.shape[:2])
