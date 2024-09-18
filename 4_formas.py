@@ -27,3 +27,10 @@ def rotation_matrix(theta):
     return np.array([[np.cos(theta), -np.sin(theta), 0],
                      [np.sin(theta), np.cos(theta), 0],
                      [0, 0, 1]])
+
+
+# 3. Escalamiento
+def scaling_matrix(sx, sy):
+    return np.array([[sx, 0, 0],
+                     [0, sy, 0],
+                     [0, 0, 1]])
