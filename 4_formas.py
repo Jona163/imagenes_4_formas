@@ -20,3 +20,10 @@ def translation_matrix(tx, ty):
     return np.array([[1, 0, tx],
                      [0, 1, ty],
                      [0, 0, 1]])
+
+
+# 2. Rotación
+def rotation_matrix(theta):
+    return np.array([[np.cos(theta), -np.sin(theta), 0],
+                     [np.sin(theta), np.cos(theta), 0],
+                     [0, 0, 1]])
