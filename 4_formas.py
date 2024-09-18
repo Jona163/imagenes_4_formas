@@ -85,3 +85,9 @@ plot_image(scaled_image, 'Escalamiento (1.5x en X, 0.5x en Y)', axs[1, 0])
 shearing = shearing_matrix(0.5, 0.2)
 sheared_image = apply_transformation(image, shearing)
 plot_image(sheared_image, 'Cizallado (0.5 en X, 0.2 en Y)', axs[1, 1])
+
+
+# Ajustar el layout para evitar solapamientos
+plt.tight_layout(rect=[0, 0, 1, 0.95])
+plt.show()
+
